@@ -1,0 +1,75 @@
+object HeaderFooterForm: THeaderFooterForm
+  Left = 0
+  Top = 0
+  Caption = 'Header Footer Form'
+  ClientHeight = 567
+  ClientWidth = 317
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object Header: TToolBar
+    Size.Width = 317.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object HeaderLabel: TLabel
+      Align = Contents
+      Size.Width = 317.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'MX7800 Scanner Delphi Example'
+    end
+  end
+  object Footer: TToolBar
+    Align = Bottom
+    Position.Y = 519.000000000000000000
+    Size.Width = 317.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+  end
+  object btActive: TButton
+    Position.X = 8.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Activate Scanner'
+    OnClick = btActiveClick
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Bottom
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.Y = 208.000000000000000000
+    Size.Width = 317.000000000000000000
+    Size.Height = 311.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Viewport.Width = 313.000000000000000000
+    Viewport.Height = 307.000000000000000000
+  end
+  object Button1: TButton
+    Position.X = 172.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Close Scanner'
+    OnClick = Button1Click
+  end
+  object MX7800ScanDevice1: TMX7800ScanDevice
+    OnBarcodeRead = MX7800ScanDevice1BarcodeRead
+    Active = False
+    Left = 224
+    Top = 456
+  end
+end

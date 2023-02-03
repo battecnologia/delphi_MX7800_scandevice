@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{24E948BE-77D9-42D3-8E00-C87BF56E2CDE}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="batMX7800BarcodeScan.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="batMX7800BarcodeScan">
+        <MSBuild Projects="batMX7800BarcodeScan.dproj"/>
+    </Target>
+    <Target Name="batMX7800BarcodeScan:Clean">
+        <MSBuild Projects="batMX7800BarcodeScan.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="batMX7800BarcodeScan:Make">
+        <MSBuild Projects="batMX7800BarcodeScan.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="batMX7800BarcodeScan"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="batMX7800BarcodeScan:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="batMX7800BarcodeScan:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
